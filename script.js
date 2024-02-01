@@ -48,3 +48,22 @@ document.addEventListener('keydown', function (event) {
         running = false
     }
 });
+
+const containerEl = document.getElementById("super-container")
+containerEl.addEventListener('click', function () {
+    if (!running) {
+        if(isReset){
+            timer.startTimer()
+            running = true
+            isReset = false
+        } else {
+            isReset = true
+            timerEL.textContent = "00"
+        }
+    } else {
+        timer.endTimer()
+        running = false
+    }
+});
+
+console.log(containerEl)
