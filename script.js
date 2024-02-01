@@ -65,5 +65,3 @@ containerEl.addEventListener('click', function () {
         running = false
     }
 });
-
-console.log(containerEl)
